@@ -1,18 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+    <link rel="stylesheet" href="{% static '/css/header.css' %}">
+    <link rel="stylesheet" href="{% static '/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static './css/section.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tiny5&display=swap" rel="stylesheet">
     <title>{% block title%} {% endblock title %}</title>
 </head>
 <body>
-    <h1>Here is my header</h1>
-    
-    {% block content %} 
+    <header>
+        <!-- left-side -->
+        <div class="logo center-row">
+            <a href="{% url 'about' %}">
+                <h2>Mauricio</h2>
+            </a>
+        </div>
+        <!-- right-side -->
+        <nav class="nav-menu center-row">
+            <!-- hambuger button -->
+            <input type="checkbox" id="check-option">
+            <div class="nav-btn">
+                <label for="check-option">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            <!-- The Menu -->
+            <div class="nav-options center-row">
+                <a href="{% url 'about' %}">About Me</a>
+                <a href=" {% url 'project_list' %}">Projects</a>
+                <a href="">Experiences</a>
+                <a href="{% url 'contact' %}">Contact</a>
+            </div>
+        </nav>
+    </header>
+    {% block content %}
+
 
     
     {% endblock content %}
 
-    <h2>Here is my footer</h2>
 </body>
 </html>

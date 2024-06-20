@@ -1,0 +1,106 @@
+/* Responsive Design and the Breakpoints
+Good practices: Add at least two media queries, one for tablet (midum screens) and one for phones (small screens).
+Following the Microsoft documentation.
+- Phone or Small screen
+    @media(max-width:640px) {
+        //Your style here
+    }
+- Tablet or Medium screen
+    @media((min-width:641px) and (max-width:1007px)){
+        //Your style here
+    }
+*/
+
+
+@media((max-width:1007px)) {
+    html {
+        font-size: 12px;
+    }
+
+    .about-section {
+        flex-direction: column !important;
+    }
+
+    .about-description-container {
+        width: 100% !important; 
+        margin-top: 2rem !important;
+    }
+    .about-image-container{
+        width: 60% !important;
+    }
+    /* .about-image-container img{
+        height: 30rem !important;
+        object-position: center 40% !important;
+    }   */
+    .project-card {
+        width: 100% !important;
+    }
+
+    .project-card img {
+        width: 100% !important;
+        height: 25rem !important;
+        object-fit: cover !important;
+        object-position: center 50% !important;
+    }
+
+    .project-card a {
+        width: 100%;
+        height: min-content;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 640px) {
+    html {
+        font-size: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        height: fit-content;
+        padding: 2%;
+    }
+
+    .nav-btn {
+        display: inline-flex;
+    }
+
+    .nav-options {
+        flex-direction: column;
+    }
+
+    .nav-btn span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: var(--neutral-color);
+        margin: 6px auto;
+    }
+
+    #check-option:not(:checked)~.nav-options {
+        height: 0;
+        overflow: hidden;
+    }
+
+    #check-option:checked~.nav-options {
+        height: auto;
+        overflow: auto;
+    }
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-description-container {
+        width: 100% !important;
+    }
+
+    .about-image-container img,
+    .about-description-container p {
+        width: 100%;
+    }
+
+    .label-list {
+        width: 90%;
+    }
+}
