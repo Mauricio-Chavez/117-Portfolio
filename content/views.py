@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Project
 
 def project_list(request):
-    return render(request, 'content/project_list.html')
+    projects = Project.objects.all()
+    return render(request, 'content/project_list.html', {'projects': projects})
