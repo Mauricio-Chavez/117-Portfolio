@@ -6,6 +6,15 @@
 {% block content %}
 
 <section class="projects-section center-column">
+
+    {% if user.is_authenticated %}
+    <div class="add-project-container">
+        <a class="btn-primary" href="{% url 'project_new' %}">
+            Add Project
+        </a>
+    </div>
+    {% endif %}
+
     <h2>Projects</h2>
     <div class="projects-list">
     {% for project in projects %}

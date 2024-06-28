@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import ContactForm
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
+
 # Create your views here.
 
 
@@ -25,4 +26,5 @@ def contact(request):
     else:
         form = ContactForm()
     return render(request, 'pages/contact.html', {'form': form})
+
 

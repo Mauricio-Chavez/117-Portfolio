@@ -20,17 +20,19 @@
     text-align: justify;
 }
 
-.label-list{
+.label-list {
     width: 70%;
     flex-wrap: wrap;
     gap: 1rem;
     padding: 2rem;
     text-align: center;
 }
-.projects-section{
+
+.projects-section {
     padding: 2rem;
 }
-.project-card{
+
+.project-card {
     width: 25rem;
     background-color: var(secondary-color);
     display: flex;
@@ -39,41 +41,105 @@
     border-radius: 1%;
 
 }
-.project-card:hover{
+
+.project-card:hover {
     opacity: 0.5;
     border: solid 1px var(--primary-color-100);
 }
-.project-card img{
+
+.project-card img {
     width: 100%;
 }
-.skills-list{
+
+.skills-list {
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 1rem;
     margin-top: 0.5rem;
 }
-a p:nth-child(2){
+
+a p:nth-child(2) {
     font-weight: bolder;
     font-size: 1.1rem;
     margin: 0.5rem 0;
     color: var(--secondary-color-600);
 }
 
-a p:nth-child(3){
+a p:nth-child(3) {
     font-style: italic;
 }
 
-a p:nth-child(4){
+a p:nth-child(4) {
     font-style: italic;
     font-weight: bolder;
     letter-spacing: 0.2rem;
     margin-top: 0.5rem;
 }
-.projects-list{
+
+.projects-list {
     margin: 2rem 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 4rem;
     width: 100%;
+}
+
+.new-project-section {
+    padding: 2rem;
+}
+
+#projectForm {
+    display: flex;
+    flex-direction: column;
+    width: 35rem;
+    height: 35rem;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+    border: solid 1px var(--secondary-color);
+    padding: 2rem 2%;
+    gap: 1rem;
+}
+#projectForm input, textarea, select {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: rgb(223, 223, 223);
+}
+
+.control {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.control .btn-primary{
+    padding: 0.5rem 1rem;
+}
+.form-c {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem auto;
+}
+.form-c input{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: rgb(223, 223, 223);
+}
+.contact .btn-primary{
+    width: 20%;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+}
+
+.contact h1{
+    margin-top: 5rem;
+    text-align: center;
+}
+.contact h3{
+    color: white;
+    margin-top: 4rem;
+}
+.contact {
+    width: 50%;
+    margin: 0 auto;
 }

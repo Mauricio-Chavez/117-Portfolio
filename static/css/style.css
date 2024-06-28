@@ -83,3 +83,25 @@ p {
     padding: 0.8rem 1.5rem;
     font-size: 1.1rem;
 }
+
+.btn-primary{
+    font-weight: bold;
+    background-color: #5fc7b4;
+    color: var(--neutral-color);
+    border: none;
+    padding: 0.5% 1%;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(172deg, #2a5c53 5.07%, #59c4b0 92.93%);
+    color: white;
+}
+
+.add-project-container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}

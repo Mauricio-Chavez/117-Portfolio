@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}New Project{% endblock title %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+
+    <section class="new-project-section center-column">
+        <h2>New Project</h2>
+
+        <form id="projectForm" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.name }}
+            {{ form.description }}
+            {{ form.repository }}
+            {{ form.year }}
+            {{ form.image }}
+            {{ form.technologies }}
+
+            <div class="control">
+                <button type="reset" class="btn-primary">Reset Form</button>
+                <button type="submit" class="btn-primary">Save Project</button>
+            </div>
+        </form>
+
+
+    </section>
+
+    {% endif %}
+{% endblock content%}

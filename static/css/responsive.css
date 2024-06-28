@@ -102,4 +102,7 @@ Following the Microsoft documentation.
     .label-list {
         width: 90%;
     }
+    .contact {
+        width: 90% !important;
+    }
 }
